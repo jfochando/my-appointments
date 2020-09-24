@@ -15,25 +15,25 @@
                 </h6>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" href="dashboard.html">
+                        <a class="nav-link active" href="{{ route('dashboard') }}">
                             <i class="ni ni-tv-2 text-primary"></i>
                             <span class="nav-link-text">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="icons.html">
+                        <a class="nav-link" href="{{ route('specialties.index')}}">
                             <i class="ni ni-planet text-blue"></i>
                             <span class="nav-link-text">Especialidades</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="map.html">
+                        <a class="nav-link" href="{{ route('doctors.index') }}">
                             <i class="ni ni-single-02 text-orange"></i>
                             <span class="nav-link-text">Médicos</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">
+                        <a class="nav-link" href="">
                             <i class="ni ni-satisfied text-info"></i>
                             <span class="nav-link-text">Pacientes</span>
                         </a>

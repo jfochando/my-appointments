@@ -32,7 +32,7 @@
             <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <h6 class="h2 text-white d-inline-block mb-0">Icons</h6>
+                        <h6 class="h2 text-white d-inline-block mb-0">{{ __('Panel de Administración') }}</h6>
                         <!-- Navbar links -->
                         <ul class="navbar-nav align-items-center  ml-md-auto ">
                             <li class="nav-item d-xl-none">
