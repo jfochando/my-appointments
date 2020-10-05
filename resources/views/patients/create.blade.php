@@ -5,10 +5,10 @@
                 <div class="card-header border-0">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="mb-0">{{ __('Nuevo Médico') }}</h3>
+                            <h3 class="mb-0">{{ __('Nuevo Paciente') }}</h3>
                         </div>
                         <div class="col text-right">
-                            <a href="{{ route('doctors.index')}}"
+                            <a href="{{ route('patients.index')}}"
                                 class="btn btn-sm btn-default">{{ __('Cancelar y Volver')}}</a>
                         </div>
                     </div>
@@ -23,12 +23,12 @@
                         </ul>
                     </div>
                     @endif
-                    <form method="POST" action="{{ route('doctors.store')}}">
+                    <form method="POST" action="{{ route('patients.store')}}">
                         @csrf
                         <div class="form-group">
-                            <label for="name">{{ __('Nombre del médico') }}</label>
+                            <label for="name">{{ __('Nombre del Paciente') }}</label>
                             <input type="text" name="name" id="name" class="form-control"
-                                placeholder="{{ __('Nombre del médico')}}" value="{{ old('name') }}">
+                                placeholder="{{ __('Nombre del Paciente')}}" value="{{ old('name') }}">
                         </div>
                         <div class="form-group">
                             <label for="email">{{ __('E-Mail') }}</label>
@@ -42,12 +42,13 @@
                         </div>
                         <div class="form-group">
                             <label for="adress">{{ __('Dirección') }}</label>
-                            <input type="text" name="adress" id="adress" class="form-control" placeholder="{{ __('Dirección')}}" value="{{ old('adress') }}">
+                            <input type="text" name="adress" id="adress" class="form-control"
+                                placeholder="{{ __('Dirección')}}" value="{{ old('adress') }}">
                         </div>
                         <div class="form-group">
                             <label for="phone">{{ __('Telefono') }}</label>
-                            <input type="phone" name="phone" id="phone" class="form-control" placeholder="{{ __('Telefono')}}"
-                                value="{{ old('phone') }}">
+                            <input type="phone" name="phone" id="phone" class="form-control"
+                                placeholder="{{ __('Telefono')}}" value="{{ old('phone') }}">
                         </div>
                         <div class="form-group">
                             <label for="password">{{ __('Contraseña') }}</label>

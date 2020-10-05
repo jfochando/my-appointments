@@ -5,11 +5,11 @@
                 <div class="card-header border-0">
                     <div class="row align-items-center">
                         <div class="col">
-                            <h3 class="mb-0">{{ __('Médicos') }}</h3>
+                            <h3 class="mb-0">{{ __('Pacientes') }}</h3>
                         </div>
                         <div class="col text-right">
-                            <a href="{{ route('doctors.create')}}"
-                                class="btn btn-sm btn-success">{{ __('Nuevo Médico')}}</a>
+                            <a href="{{ route('patients.create')}}"
+                                class="btn btn-sm btn-success">{{ __('Nuevo Paciente')}}</a>
                         </div>
                     </div>
                 </div>
@@ -33,24 +33,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($doctors as $doctor)
+                                @foreach ($patients as $patient)
                                 <tr>
                                     <th scope="row">
-                                        {{ $doctor->name }}
+                                        {{ $patient->name }}
                                     </th>
                                     <td>
-                                        {{ $doctor->email }}
+                                        {{ $patient->email }}
                                     </td>
                                     <td>
-                                        {{ $doctor->dni }}
+                                        {{ $patient->dni }}
                                     </td>
                                     <td>
 
-                                        <form class="" action="{{ route('doctors.destroy', $doctor->id )}}"
+                                        <form class="" action="{{ route('patients.destroy', $patient->id )}}"
                                             method="POST">
                                             @csrf
                                             @method('DELETE')
-                                            <a href="{{ route('doctors.edit', $doctor->id )}}"
+                                            <a href="{{ route('patients.edit', $patient->id )}}"
                                                 class="btn btn-sm btn-primary">{{ __('Editar') }}</a>
                                             <button type="submit" href=""
                                                 class="btn btn-sm btn-danger">{{ __('Eliminar') }}</button>
@@ -59,11 +59,10 @@
                                     </td>
                                 </tr>
                                 @endforeach
-
                             </tbody>
                         </table>
                     </div>
-                    {{ $doctors->links() }}
+                    {{ $patients->links() }}
                 </div>
             </div>
         </div>
